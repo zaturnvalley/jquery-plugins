@@ -1,45 +1,58 @@
-![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
+# jQuery Plugins Lab
 
-#jQuery Plugins
+Using your knowledge of jQuery and the various plugins available for it, we're going to build an application that lists content using tabs and accordions.
 
-##Objectives
+## Resources
 
-* Describe what jQuery plugins are used for
-* Include and implement jQuery plugins on web pages
-* Experiment with different plugins and making custom jQuery plugins
+* [jQuery API](https://api.jquery.com/)
+* [jQuery UI](http://jqueryui.com/)
 
-##Plugins
+##Loading Dependencies
 
-As you've come to seen, jQuery provides many useful functions to make DOM selection much easier. Instead of having to loop through arrays of DOM elements, we can perform complex selections in one line. Here's an example of using `.css()` to change all spans inside list items red.
+For this project you should be using jQuery and jQuery UI. Generally you can find the CDN for these by using google, but to get you up and running quickly we've included the CDN links below.
 
-```js
-$('li span').css('color', 'red');
-```
-
-But as you've come to discover, programmers always want more. jQuery was designed with extensibility in mind, which means we can use plugins in order to extend jQuery's functionality. The most common plugin is jQuery UI.
-
-##jQuery UI
-
-[jQuery UI](https://jqueryui.com/)
-
-jQuery UI provides an additional library of user interactions and elements not provided by jQuery. In order to use its features, include the following script **after** jQuery.
-
-**NOTE:** jQuery UI requires jQuery in order to extend jQuery's features. This is common across jQuery plugins, so make sure to import plugins after jQuery.
+**Paste these in your `<head>` tag:**
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 ```
 
-jQuery UI also provides elements with 'themes' or styling. In order to use these styled elements (dropdowns, accordions, etc.), be sure to include the appropriate jQuery UI CSS file as well (in `<head>`)
+**Paste these before the `</body>` tag:**
 
 ```html
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.theme.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 ```
 
-Once jQuery UI is included on the page, jQuery is *extended*, meaning jQuery UI provides additional functions to jQuery. An example:
+##Minimum Requirements
 
-```js
-$('.item').draggable();
-```
+* A user should be able to view four different paragraphs of text using tabs. See [jQuery UI tabs](http://jqueryui.com/tabs/).
 
-[Here's an example on Codepen](http://codepen.io/bhague1281/pen/YwLXMV)
+* Below the tabs, a user should be able to view four different images using accordions. See [jQuery UI accordions](http://jqueryui.com/accordion/).
+
+* Text can be obtained via Wikipedia, news articles, or another source. Images can be obtained via a placeholder image site (like [placekitten](https://placekitten.com)).
+
+##How to get started
+
+1. Start by constructing a basic `index.html` page as your starting point.
+
+2. Load the CDN for jQuery and jQuery UI.
+
+3. Focus first on laying out your page with the appropriate elements, then work on writing the appropriate jQuery code.
+
+
+## Bonus
+
+* Include some other jQuery plugins that may interest you. Here are some commonly used ones:
+  * [parallax.js](http://pixelcog.github.io/parallax.js/)
+  * [Avgrund Modal](http://labs.voronianski.com/jquery.avgrund.js/)
+  * [Bigvideo.js](http://dfcb.github.io/BigVideo.js/)
+
+## Super Bonus
+
+* Create your own jQuery plugin. Now that you've experimented with plugins, you'll be pleased to hear that making your own is actually pretty easy.
+  * [jQuery Documentation for Custom Plugins](https://learn.jquery.com/plugins/basic-plugin-creation/)
+
+## Super Super Bonus (this is pretty tough)
+
+* Add a button that allows you to switch between displaying content in tabs and accordions. For example, if a button is added for the tabs of text, pressing it would display the text in accordions.
