@@ -1,4 +1,4 @@
-# jQuery Plugins Lab
+# jQuery Plugins Workshop
 
 Using your knowledge of jQuery and the various plugins available for it, we're going to build an application that lists content using tabs and accordions.
 
